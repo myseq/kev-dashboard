@@ -1,5 +1,5 @@
 # kev-dashboard.py
-kev-dashboard.py is a simple tool to generate a dashboard for CISA's Known Exploited Vulnerabilities (KEV).
+`kev-dashboard.py` is a simple tool to generate a dashboard for CISA's Known Exploited Vulnerabilities (KEV).
 
 This tool is written in python, and it can display the dashboard in two (2) modes: text mode or ASCII chart mode.
 
