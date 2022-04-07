@@ -124,6 +124,4 @@ Top 5 Vulnerable Products [ 307 ]
 - [CISA Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
 - [KEV Dashboard blog post](https://myseq.blogspot.com/2022/04/kev-dashboard.html)
 - [KEV Catalog tool](https://github.com/myseq/kev-cataglog/)
-- [Termgraph](https://github.com/mkaz/termgraph)
-
-
+- [Termgraph](https://github.com/mkaz/termgraph) - Great utility to draw basic charts (Bar chart, Historgram, heatmap, etc) in the terminal.
