@@ -1,7 +1,7 @@
 # kev-dashboard.py
 `kev-dashboard.py` is a simple tool to generate a dashboard for CISA's Known Exploited Vulnerabilities (KEV).
 
-This tool is written in python, and it can display the dashboard in two (2) modes: text mode or ASCII chart mode.
+This tool is written in python, and it can display the dashboard in two (2) modes: **text** mode or **ASCII chart** mode. This tools is created after I got inspired by 2 things: Kenna EPSS distribution per cve/vendor (very cool) and the command line utility (termgraph) that draws basic graphs in the terminal. So I decided to take up the challenge to create a similar tool for both the idea.
 
 # Usage
 To show the help screen.
@@ -119,7 +119,11 @@ Top 5 Vulnerable Products [ 307 ]
  
 ```
 
+
 # References
 - [CISA Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
-- [KEV Dashboard](https://myseq.blogspot.com/2022/04/kev-dashboard.html)
+- [KEV Dashboard blog post](https://myseq.blogspot.com/2022/04/kev-dashboard.html)
 - [KEV Catalog tool](https://github.com/myseq/kev-cataglog/)
+- [Termgraph](https://github.com/mkaz/termgraph)
+
+
