@@ -8,6 +8,22 @@ This tool is written in python, and it can display the dashboard in two (2) mode
 To show the help screen.
 ```console
 $ ./kev-dashboard.py -h
+usage: kev-dashboard.py [-h] [-c] [-i <n>] [-j <file.json>] [-v]
+
+   Zzzzz   |\      _,,,---,,_
+           /,`.-'`'    -.  ;-;;,_   __author__ : [ zd ]
+          |,4-  ) )-,_..;\ (  `'-'  __year__   : [ 2022.03 ]
+         '---''(_/--'  `-'\_)       __file__   : [ ./kev-dashboard.py ]
+
+         [ Analysis Dashboard for CISA's Known Exploited Vulns (KEV) Catalog ]
+
+
+optional arguments:
+  -h, --help      show this help message and exit
+  -c              Show output as chart
+  -i <n>          Specifying most common vendor/product. Default is top 5.
+  -j <file.json>  Specifying local JSON file
+  -v              verbose output
 ```
 
 To show the dahboard in text mode.
