@@ -3,7 +3,6 @@ kev-dashboard.py is a simple tool to generate a dashboard for CISA's Known Explo
 
 This tool is written in python, and it can display the dashboard in two (2) modes: text mode or ASCII chart mode.
 
-
 # Usage
 To show the help screen.
 ```console
