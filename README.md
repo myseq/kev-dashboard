@@ -125,3 +125,4 @@ Top 5 Vulnerable Products [ 307 ]
 - [KEV Dashboard blog post](https://myseq.blogspot.com/2022/04/kev-dashboard.html)
 - [KEV Catalog tool](https://github.com/myseq/kev-cataglog/)
 - [Termgraph](https://github.com/mkaz/termgraph) - Great utility to draw basic charts (Bar chart, Historgram, heatmap, etc) in the terminal.
+- [Simple examples on using jq command line](tips.md)
