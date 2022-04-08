@@ -1,13 +1,15 @@
 # Tips (Using JQ)
+To make it easy for testing, it is recommended to download the `known_exploited_vulnerabilities.json` and rename it as `today.json`. 
+
 
 1. List all the vulnerabilities that will due on 2022-04-15, and show in one line per object.
 ```console
-$ cat known_exploited_vulnerabilities.json | jq -c '.vulnerabilities[] | select ( .dueDate == "2022-04-15" ) '
+$ cat today.json | jq -c '.vulnerabilities[] | select ( .dueDate == "2022-04-15" ) '
 ```
 
 2. List all the vulnerabiities that will due on 2022-06-01, and show them in JSON format.
 ```console
-$ cat known_exploited_vulnerabilities.json | jq '.vulnerabilities[] | select ( .dueDate == "2022-06-01" ) '
+$ cat today.json | jq '.vulnerabilities[] | select ( .dueDate == "2022-06-01" ) '
 
 {
   "cveID": "CVE-2020-11261",
@@ -33,7 +35,28 @@ $ cat known_exploited_vulnerabilities.json | jq '.vulnerabilities[] | select ( .
 
 3. Count vulnerability that will due on 2022-04-15. [66]
 ```console
-$ cat known_exploited_vulnerabilities.json | jq  -c '[ .vulnerabilities[] | select ( .dueDate == "2022-04-15" ) ] | length '
+$ cat today.json | jq  -c '[ .vulnerabilities[] | select ( .dueDate == "2022-04-15" ) ] | length '
 66
+```
+
+4. Select any vulnerability where vendor is 'Cisco'.
+```console
+$ cat today.json | jq  -c '[ .vulnerabilities[] | select ( .vendorProject == "Cisco" )] | length '
+54
+```
+
+5. Search for a particular CVE like CVE-2021-21551
+```console
+$ cat today.json | jq  ' .vulnerabilities[] | select ( .cveID == "CVE-2021-21551" ) '
+{
+  "cveID": "CVE-2021-21551",
+  "vendorProject": "Dell",
+  "product": "dbutil Driver",
+  "vulnerabilityName": "Dell dbutil Driver Insufficient Access Control Vulnerability",
+  "dateAdded": "2022-03-31",
+  "shortDescription": "Dell dbutil driver contains an insufficient access control vulnerability which may lead to escalation of privileges, denial-of-service, or information disclosure.",
+  "requiredAction": "Apply updates per vendor instructions.",
+  "dueDate": "2022-04-21"
+}
 ```
 
