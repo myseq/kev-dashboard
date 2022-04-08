@@ -10,7 +10,7 @@ $ cat today.json | jq  ' .title , .catalogVersion , .dateReleased , .count  '   
 609
 ```
 
-### List all the vulnerabilities that will due on 2022-04-15, and show in one line per object.
+### List all the vulnerabilities that will due on 2022-04-15, and show every vulnerability on 1 line each.
 ```console
 $ cat today.json | jq -c '.vulnerabilities[] | select ( .dueDate == "2022-04-15" ) '
 {"cveID":"CVE-2022-26318","vendorProject":"WatchGuard","product":"Firebox and XTM Appliances","vulnerabilityName":"WatchGuard Firebox and XTM Appliances Arbitrary Code Execution","dateAdded":"2022-03-25","shortDescription":"On WatchGuard Firebox and XTM appliances, an unauthenticated user can execute arbitrary code.","requiredAction":"Apply updates per vendor instructions.","dueDate":"2022-04-15"}
