@@ -1,13 +1,21 @@
 # Tips (Using JQ)
 To make it easy for testing, it is recommended to download the `known_exploited_vulnerabilities.json` and rename it as `today.json`. 
 
+### Show the information about JSON file.
+```console
+$ cat today.json | jq  ' .title , .catalogVersion , .dateReleased , .count  '                                                                                                                                                                         3 ⨯
+"CISA Catalog of Known Exploited Vulnerabilities"
+"2022.03.31.2"
+"2022-03-31T16:29:24.2424Z"
+609
+```
 
-1. List all the vulnerabilities that will due on 2022-04-15, and show in one line per object.
+### List all the vulnerabilities that will due on 2022-04-15, and show in one line per object.
 ```console
 $ cat today.json | jq -c '.vulnerabilities[] | select ( .dueDate == "2022-04-15" ) '
 ```
 
-2. List all the vulnerabiities that will due on 2022-06-01, and show them in JSON format.
+### List all the vulnerabiities that will due on 2022-06-01, and show them in JSON format.
 ```console
 $ cat today.json | jq '.vulnerabilities[] | select ( .dueDate == "2022-06-01" ) '
 
@@ -33,19 +41,19 @@ $ cat today.json | jq '.vulnerabilities[] | select ( .dueDate == "2022-06-01" ) 
 }
 ```
 
-3. Count vulnerability that will due on 2022-04-15. [66]
+### Count vulnerability that will due on 2022-04-15. [66]
 ```console
 $ cat today.json | jq  -c '[ .vulnerabilities[] | select ( .dueDate == "2022-04-15" ) ] | length '
 66
 ```
 
-4. Select any vulnerability where vendor is 'Cisco'.
+### Select any vulnerability where vendor is 'Cisco'.
 ```console
 $ cat today.json | jq  -c '[ .vulnerabilities[] | select ( .vendorProject == "Cisco" )] | length '
 54
 ```
 
-5. Search for a particular CVE like CVE-2021-21551
+### Search for a particular CVE like CVE-2021-21551
 ```console
 $ cat today.json | jq  ' .vulnerabilities[] | select ( .cveID == "CVE-2021-21551" ) '
 {
