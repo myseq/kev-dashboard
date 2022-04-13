@@ -57,6 +57,11 @@ $ cat today.json | jq  -c '[ .vulnerabilities[] | select ( .dueDate == "2022-04-
 $ cat today.json | jq  -c '[ .vulnerabilities[] | select ( .vendorProject == "Cisco" )] | length '
 54
 ```
+```console
+$ cat today.json | jq  -c ' .vulnerabilities[] | select ( .vendorProject == "Cisco" ) '  | wc -l
+ 54
+```
+
 
 ### Search for a particular CVE like CVE-2021-21551
 ```console
