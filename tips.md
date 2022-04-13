@@ -80,13 +80,13 @@ $ cat today.json | jq  ' .vulnerabilities[] | select ( .cveID == "CVE-2021-21551
 
 
 ### Search and count for any Remote Code Execution (RCE) vulnerability that due in 2022-04-15
-```conole
+```console
 $ cat today.json | jq -c '.vulnerabilities[] | select ( .dueDate == "2022-04-15" ) ' | grep -i 'remote code execution' | wc -l
 33
 ```
 
 ### Search and count for any Denial of Service (DoS) attack that due in 2022-04-15
-```conole
+```console
 $ cat today.json | jq -c '.vulnerabilities[] | select ( .dueDate == "2022-04-15" ) ' | grep -i 'denial-of-service' | wc -l
 2
 ```
