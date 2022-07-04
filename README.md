@@ -119,6 +119,16 @@ Top 5 Vulnerable Products [ 307 ]
  
 ```
 
+```console
+$ kev-dashboard.py 
+```
+![./kev-dashboard.py](.github/2022-07-04_787.png)
+
+```console
+$ kev-dashboard.py -c 
+```
+![./kev-dashboard.py -c](.github/2022-07-04_787c.png)
+
 
 # References
 - [CISA Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
